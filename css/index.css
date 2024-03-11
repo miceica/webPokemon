@@ -1,10 +1,10 @@
 #logo {
-    width: 300px;
+    width: 200px;
 }
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .container {
@@ -12,15 +12,60 @@ header {
     margin: 0 auto;
 }
 
+.barras-menu {
+    display: none;
+}
+
+.estilo-menu {
+    list-style: none;
+    display: flex;
+}
+
+.estilo-menu a {
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    font-size: 30px;
+}
+
+#menu-movil li:nth-child(-n+2) {
+    /* Estilos que deseas aplicar a los dos primeros elementos */
+    border-right: 1px solid blue;
+}
+
+#loading {
+    display: block;
+    margin: 0 auto;
+    display: none;
+}
+
+
+/* Media query para tamaños de pantalla más pequeños donde quieres ocultar el h1 */
 @media screen and (max-width: 376px) {
+    .barras-menu {
+        display: block;
+    }
+
     h1 {
         display: none;
+        /* Oculta el h1 */
     }
 
     header {
         justify-content: space-around;
     }
+
+    .estilo-menu {
+        display: inline;
+    }
+
     .menu-movil {
         display: none;
     }
+
+    #menu-movil li:nth-child(-n+2) {
+        /* Estilos que deseas aplicar a los dos primeros elementos */
+        border: none;
+    }
+
 }
