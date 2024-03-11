@@ -1,0 +1,26 @@
+#logo {
+    width: 300px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 376px) {
+    h1 {
+        display: none;
+    }
+
+    header {
+        justify-content: space-around;
+    }
+    .menu-movil {
+        display: none;
+    }
+}
