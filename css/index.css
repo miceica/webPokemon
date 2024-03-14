@@ -1,5 +1,6 @@
 #logo {
-    width: 200px;
+    width: 100%; /* Cambiado a porcentaje para hacerlo más adaptable */
+    max-width: 200px; /* Agregado máximo ancho para evitar distorsión en pantallas grandes */
 }
 
 header {
@@ -23,21 +24,97 @@ header {
 
 .estilo-menu a {
     text-decoration: none;
-    display: block;
+    font-size: 1.5rem; /* Cambiado a rem para hacerlo más adaptable */
     margin: 10px;
-    font-size: 30px;
 }
 
 #menu-movil li:nth-child(-n+2) {
-    /* Estilos que deseas aplicar a los dos primeros elementos */
     border-right: 1px solid blue;
 }
 
 #loading {
-    display: block;
+    display: none; /* Eliminado "display: block" redundante */
     margin: 0 auto;
-    display: none;
 }
+
+#containerpk article {
+    width: 20%; /* Cambiado a porcentaje para hacerlo más adaptable */
+    border: 3px solid #0075BE;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#containerpk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#containerpk article img {
+    width: 100%; /* Cambiado a porcentaje para hacerlo más adaptable */
+    max-width: 80px; /* Agregado máximo ancho para evitar distorsión en pantallas grandes */
+}
+
+footer {
+    text-align: center; /* Centra el contenido del footer */
+}
+
+.navegacion {
+    margin: 20px auto; /* Añade margen para separar el footer del resto del contenido */
+}
+
+.navegacion span {
+    display: inline-block; /* Hace que los elementos se comporten como bloques para aplicar estilos de forma más fácil */
+    padding: 10px 20px; /* Añade espacio alrededor del contenido */
+    border-radius: 5px; /* Agrega esquinas redondeadas */
+    background-color: #FFCC00; /* Añade un color de fondo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los elementos */
+    transition: background-color 0.3s; /* Agrega una transición suave */
+}
+
+.navegacion span i {
+    margin: 5px; /* Agrega un margen al ícono */
+}
+
+.navegacion span:hover {
+    border: 3px solid #0075BE; /* Añade un borde sólido al pasar el ratón por encima */ 
+}
+
+/* Estilos para el buscador */
+.buscador {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Mueve el buscador a la derecha */
+}
+
+#buscar {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px; /* Espacio entre el input y el botón */
+}
+
+#buscarBtn {
+    background-color: #FFCC00;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#buscarBtn:hover {
+    color: #0075BE;
+}
+
+
+
+
+
+
 
 
 /* Media query para tamaños de pantalla más pequeños donde quieres ocultar el h1 */
@@ -48,7 +125,6 @@ header {
 
     h1 {
         display: none;
-        /* Oculta el h1 */
     }
 
     header {
@@ -64,8 +140,10 @@ header {
     }
 
     #menu-movil li:nth-child(-n+2) {
-        /* Estilos que deseas aplicar a los dos primeros elementos */
-        border: none;
+        border: none; /* Cambiado para eliminar el borde */
     }
 
+    #containerpk article {
+        width: 100%; /* Cambiado para ocupar todo el ancho disponible */
+    }
 }
